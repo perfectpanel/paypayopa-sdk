@@ -77,7 +77,7 @@ class User extends Controller
      */
     public function decodeUserAuth($encodedString)
     {
-        $key = new JWT\Key(base64_decode($this->auth['API_SECRET']), 'HS256');
+        $key = new JWT\Key(base64_decode((string) $this->auth['API_SECRET']), 'HS256');
         return (array) JWT\JWT::decode($encodedString, $key);
     }
     /**

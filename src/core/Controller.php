@@ -117,7 +117,7 @@ class Controller
     {
         if ($lookupApi) {
             $apiInfo = $this->main()->GetApiMapping($apiId);
-            $callType = strtolower($apiInfo["method"]);
+            $callType = strtolower((string) $apiInfo["method"]);
         } else {
             $apiInfo = false;
             $callType = $apiId;
