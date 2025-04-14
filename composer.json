@@ -1,5 +1,5 @@
 {
-    "name": "paypayopa/php-sdk",
+    "name": "perfectpanel/paypayopa-sdk",
     "description": "PHP SDK for PayPay Open Payment API",
     "license": "Apache-2.0",
     "type": "library",
