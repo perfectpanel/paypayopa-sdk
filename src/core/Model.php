@@ -37,11 +37,11 @@ class Model
                 $faults[] = $memberName;
             }
             if ($memberInfo['type'] === 'string') {
-                if (strlen($member) < 1) {
-                    throw new ModelException("${memberName} cannot be empty", 1, [$memberName]);
+                if (strlen((string) $member) < 1) {
+                    throw new ModelException("{$memberName} cannot be empty", 1, [$memberName]);
                 }
-                if (isset($memberInfo['strlen']) && $memberInfo['strlen'] !== 0 && strlen($member) > $memberInfo['strlen']) {
-                    throw new ModelException("${memberName} exceeds maximum size of  characters", 1, [$memberName]);
+                if (isset($memberInfo['strlen']) && $memberInfo['strlen'] !== 0 && strlen((string) $member) > $memberInfo['strlen']) {
+                    throw new ModelException("{$memberName} exceeds maximum size of  characters", 1, [$memberName]);
                 }
             }
         }
